@@ -1,0 +1,22 @@
+body,
+html {
+  margin: 10;
+  padding: 0;
+  background-color: rgb(191, 206, 219);
+}
+header{
+  align-content: center;
+}
+
+h1 {
+  align-self: center;
+  width: 100vw;
+  height: 50px;
+}
+
+
+p {
+  font-size: 12px;
+  font-family: "Courier New", Courier, monospace;
+  font-style: oblique;
+}
