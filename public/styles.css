@@ -1,15 +1,16 @@
 body,
 html {
-  margin: 10;
+  margin: 0;
   padding: 0;
   background-color: rgb(191, 206, 219);
+  height: 100vh;
+  width: 100vw;
 }
 
 div {
   display: block;
   text-align: center;
   font-size: large;
-  padding: 20px;
 }
 
 .center {
@@ -20,7 +21,25 @@ div {
 }
 
 p {
-  font-size: 15px;
-  row-gap: 5px;
-  word-spacing: 2px;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.item {
+  width: 32%;
+  /* padding-bottom: 32%; Same as width, sets height */
+  margin-bottom: 2%; /* (100-32*3)/2 */
+  position: relative;
+  border: 1px solid gray;
+  background-color: rgb(234, 172, 147);
+}
+.image {
+  height: 200px;
+  width: 200px;
 }
