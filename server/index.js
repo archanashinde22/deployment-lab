@@ -15,9 +15,18 @@ rollbar.log("Hello world!");
 
 app.use(express.static(path.join(__dirname, "/../public")));
 app.get("/", function (req, res) {
-  rollbar.info("Main page accessed")
+  rollbar.info("Main page accessed");
   res.sendFile(path.join(__dirname, "..public/index.html"));
 });
+
+try {
+  nonExistentFunction();
+} catch (error) {
+  rollback.warning("Non -function");
+  console.error(error);
+  // expected output: ReferenceError: nonExistentFunction is not defined
+  // Note - error messages will vary depending on browser
+}
 
 const port = process.env.PORT || 4006;
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
